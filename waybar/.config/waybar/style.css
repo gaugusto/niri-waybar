@@ -1,0 +1,150 @@
+@import "../color-themes/colors.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  border: none;
+  border-radius: 0px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+tooltip {
+  border-radius: 10px;
+  background-color: @background;
+  border: none;
+}
+
+tooltip label {
+  color: @backgroundText;
+  padding: 15px;
+}
+
+window#waybar {
+  background-color: alpha(@surface, 0.6);
+  border-radius: 100px;
+  border: none;
+}
+
+#workspaces {
+  margin: 0 5px;
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+#workspaces button {
+  background-color: darker(@surface);
+  color: lighter(@surfaceText);
+  border-radius: 100px;
+  margin: 3px 5px;
+  min-width: 30px;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  background: inherit;
+  text-shadow: inherit;
+
+  background-color: @secondary;
+  color: @surfaceText;
+  min-width: 65px;
+  transition: all 0.3s ease-in-out
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: @outline;
+  color: @surfaceText;
+  min-width: 65px;
+  transition: all 0.3s ease-in-out
+}
+
+#workspaces button.urgent {
+  background-color: darker(@error);
+}
+
+#principal #custom-drawer,
+#principal #idle_inhibitor,
+#principal #pulseaudio,
+#principal #network,
+#principal #power-profiles-daemon,
+#principal #cpu,
+#principal #memory,
+#principal #wireplumber,
+#battery,
+#tray,
+#clock,
+#custom-notification,
+#custom-power {
+  padding: 3px 10px;
+  margin: 3px 5px;
+  border-radius: 100px;
+  background-color: darker(@outline);
+  color: @surfaceText;
+}
+
+#principal #custom-drawer:hover,
+#principal #idle_inhibitor:hover,
+#principal #pulseaudio:hover,
+#principal #network:hover,
+#principal #power-profiles-daemon:hover,
+#principal #cpu:hover,
+#principal #memory:hover,
+#principal #wireplumber:hover,
+#battery:hover,
+#clock:hover,
+#custom-notification:hover,
+#custom-power:hover {
+  background-color: @outline;
+  color: @surfaceText;
+}
+
+#custom-power {
+  margin-right: 15px;
+}
+
+#principal #power-profiles-daemon.performance {
+  color: @error;
+}
+
+#principal #power-profiles-daemon.balanced {
+  color: @warning;
+}
+
+#principal #power-profiles-daemon.power-saver {
+  color: @info;
+}
+
+
+#principal #network.disconnected {
+  background-color: darker(@primary);
+}
+
+#principal #pulseaudio.muted {
+  background-color: darker(#f53c3c);
+  color: @secondary;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: darker(#f53c3c);
+}
+
+#tray menu {
+  background-color: @surface;
+}
+
+#principal #idle_inhibitor.activated {
+  background-color: @primary;
+  color: @primaryText;
+}
+
