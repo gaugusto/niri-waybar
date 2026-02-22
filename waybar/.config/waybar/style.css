@@ -1,7 +1,8 @@
 @import "../color-themes/colors.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  /* font-family: "monospace"; */
   font-weight: 600;
   font-size: 0.9rem;
 

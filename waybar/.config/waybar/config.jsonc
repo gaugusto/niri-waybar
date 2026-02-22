@@ -14,8 +14,8 @@
     "clock"
   ],
   "modules-right": [
-    "battery",
     "group/principal",
+    "battery",
     "tray",
     "mpd",
     "custom/notification",
@@ -217,7 +217,7 @@
     "on-click": "~/.local/bin/session-menu.sh"
   },
   "custom/drawer": {
-    "format": "󰳝",
+    "format": "",
     "interval": 0
   }
 }

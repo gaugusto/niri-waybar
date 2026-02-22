@@ -184,10 +184,10 @@ binds {
   }
 
   XF86MonBrightnessUp allow-when-locked=true {
-    spawn "brightnessctl" "--class=backlight" "set" "+10%"; 
+    spawn "swayosd-client" "--brightness" "+10"; 
   }
   XF86MonBrightnessDown allow-when-locked=true {
-    spawn "brightnessctl" "--class=backlight" "set" "10%-"; 
+    spawn "swayosd-client" "--brightness" "-10"; 
   }
 
 

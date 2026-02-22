@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Define as opções (Texto exibido no menu)
-lock=" Lock"
-logout=" Log Out"
-reboot=" Restart"
-shutdown=" Power Off"
-suspend=" Suspend"
-hibernate="󰒄 Hibernate"
+lock="  Lock"
+logout="  Log Out"
+reboot="  Restart"
+shutdown="  Power Off"
+suspend="  Suspend"
+hibernate="󰒄  Hibernate"
 
 # Concatena as opções separadas por nova linha
 options="$lock\n$logout\n$reboot\n$shutdown\n$suspend\n$hibernate"
@@ -18,7 +18,7 @@ chosen="$(echo -e "$options" | rofi -dmenu)"
 # Executa a ação baseada na escolha
 case $chosen in
 $lock)
-  hyprlock
+  ~/.local/bin/swaylock.sh
   ;;
 $logout)
   systemctl --user exit
