@@ -17,7 +17,7 @@
 
 tooltip {
   border-radius: 10px;
-  background-color: @background;
+  background-color: alpha(@background, 0.99);
   border: none;
 }
 
@@ -59,24 +59,30 @@ window#waybar {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: @outline;
+  background-color: darker(@outline);
   color: @surfaceText;
   min-width: 65px;
   transition: all 0.3s ease-in-out
+}
+
+#workspaces button.focused:hover,
+#workspaces button.active:hover {
+  background-color: @secondary;
+  color: @primaryText;
 }
 
 #workspaces button.urgent {
   background-color: darker(@error);
 }
 
-#principal #custom-drawer,
-#principal #idle_inhibitor,
-#principal #pulseaudio,
-#principal #network,
-#principal #power-profiles-daemon,
-#principal #cpu,
-#principal #memory,
-#principal #wireplumber,
+#custom-drawer,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#wireplumber,
 #battery,
 #tray,
 #clock,
@@ -89,44 +95,44 @@ window#waybar {
   color: @surfaceText;
 }
 
-#principal #custom-drawer:hover,
-#principal #idle_inhibitor:hover,
-#principal #pulseaudio:hover,
-#principal #network:hover,
-#principal #power-profiles-daemon:hover,
-#principal #cpu:hover,
-#principal #memory:hover,
-#principal #wireplumber:hover,
+#custom-drawer:hover,
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#cpu:hover,
+#memory:hover,
+#wireplumber:hover,
 #battery:hover,
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: @outline;
-  color: @surfaceText;
+  background-color: @secondary;
+  color: @primaryText;
 }
 
 #custom-power {
   margin-right: 15px;
 }
 
-#principal #power-profiles-daemon.performance {
+#power-profiles-daemon.performance {
   color: @error;
 }
 
-#principal #power-profiles-daemon.balanced {
+#power-profiles-daemon.balanced {
   color: @warning;
 }
 
-#principal #power-profiles-daemon.power-saver {
+#power-profiles-daemon.power-saver {
   color: @info;
 }
 
 
-#principal #network.disconnected {
+#network.disconnected {
   background-color: darker(@primary);
 }
 
-#principal #pulseaudio.muted {
+#pulseaudio.muted {
   background-color: darker(#f53c3c);
   color: @secondary;
 }
@@ -144,7 +150,7 @@ window#waybar {
   background-color: @surface;
 }
 
-#principal #idle_inhibitor.activated {
+#idle_inhibitor.activated {
   background-color: @primary;
   color: @primaryText;
 }

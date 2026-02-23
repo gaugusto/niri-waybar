@@ -125,6 +125,30 @@ layer-rule {
   }
 }
 
+layer-rule {
+    match namespace="waybar"
+    match at-startup=true
+
+    // Properties that apply continuously.
+    // opacity 0.9
+    block-out-from "screencast"
+    // block-out-from "screen-capture"
+
+    shadow {
+        on
+        // off
+        softness 40
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000064"
+        // inactive-color "#00000064"
+    }
+
+    geometry-corner-radius 12
+    // place-within-backdrop true
+    // baba-is-float true
+}
 
 binds {
   Mod+Shift+Slash { show-hotkey-overlay; }
@@ -149,12 +173,15 @@ binds {
   Mod+Alt+N hotkey-overlay-title="Notification center" {
     spawn "swaync-client" "-t" "-sw";
   }
-
   Mod+Shift+L hotkey-overlay-title="Swaylock" {
     spawn-sh "~/.local/bin/swaylock.sh";
   }
   Mod+Escape hotkey-overlay-title="Session menu" {
     spawn-sh "~/.local/bin/session-menu.sh";
+  }
+
+  Mod+Alt+W hotkey-overlay-title="Wallpaper random" {
+    spawn-sh "~/.local/bin/wallset-random.sh";
   }
 
   XF86AudioRaiseVolume allow-when-locked=true { 
