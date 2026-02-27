@@ -2,23 +2,11 @@
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
 * {
-    bg0:    #313244;
-    bg1:    #45475a;
-    bg2:    #585b70;
-    bg3:    #cba6f7;
-    fg0:    #f5c2e7;
-    fg1:    #b4befe;
-    fg2:    #74c7ec;
-    fg3:    #585b70;
-}
-/* ROUNDED THEME FOR ROFI */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
-* {
-    font:   "JetBrainsMono Nerd Font Propo 12";
+    // font:   "Roboto 12";
+    font:   "sans-serif 13";
 
     background-color:   transparent;
-    text-color:         @fg1;
+    text-color:         @fg0;
 
     margin:     0px;
     padding:    0px;
@@ -26,7 +14,7 @@
 }
 
 window {
-    location:       center;
+    location:       north;
     y-offset:       calc(50% - 176px);
     width:          480;
     border-radius:  24px;
@@ -40,9 +28,9 @@ mainbox {
 
 inputbar {
     background-color:   @bg1;
-    border-color:       @bg2;
+    border-color:       @bg3;
 
-    border:         3px;
+    border:         2px;
     border-radius:  16px;
 
     padding:    8px 16px;
@@ -51,20 +39,19 @@ inputbar {
 }
 
 prompt {
-    text-color: @fg1;
+    text-color: @fg2;
 }
 
 entry {
-    // placeholder:        "Search";
-    placeholder-color:  @bg3;
-    text-color:         @fg1;
+    placeholder:        "Search";
+    placeholder-color:  @fg3;
 }
 
 message {
     margin:             12px 0 0;
     border-radius:      16px;
-    border-color:       @bg0;
-    background-color:   @bg0;
+    border-color:       @bg2;
+    background-color:   @bg2;
 }
 
 textbox {
@@ -88,15 +75,15 @@ element {
 }
 
 element normal active {
-    text-color: @bg2;
+    text-color: @bg3;
 }
 
 element alternate active {
-    text-color: @fg0;
+    text-color: @bg3;
 }
 
 element selected normal, element selected active {
-    background-color:   @fg3;
+    background-color:   @bg3;
 }
 
 element-icon {
@@ -107,9 +94,3 @@ element-icon {
 element-text {
     text-color: inherit;
 }
-
-element selected {
-    text-color: @bg3;
-}
-
-
