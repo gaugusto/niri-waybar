@@ -31,4 +31,4 @@ swaylock \
   --inside-wrong-color "$error" \
   --ring-clear-color "$surfaceText" \
   --inside-clear-color "$surfaceText" \
-  --color "$surface"
+  --color "$surface" -f
