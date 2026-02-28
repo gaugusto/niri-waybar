@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+BIN_DIR="$HOME/.local/bin/"
+
+# Garante que o diretório existe
+[ -d "$BIN_DIR" ] || {
+  echo "Diretório $BIN_DIR não encontrado."
+  exit 1
+}
+
+# Lista apenas arquivos .sh (nome do arquivo sem caminho)
+mapfile -t SCRIPTS < <(find "$BIN_DIR" -maxdepth 1 -type f -name "*.sh" -printf "%f\n" | sort)
+
+# Sai se não houver scripts
+[ ${#SCRIPTS[@]} -eq 0 ] && {
+  echo "Nenhum script .sh encontrado em $BIN_DIR"
+  exit 1
+}
+
+# Menu com rofi (modo dmenu)
+SELECTED=$(printf "%s\n" "${SCRIPTS[@]}" | rofi -show -dmenu -i)
+
+# Sai se nada foi selecionado
+[ -z "$SELECTED" ] && exit 0
+
+FULL_PATH="$BIN_DIR/$SELECTED"
+
+# Torna executável se necessário
+if [ ! -x "$FULL_PATH" ]; then
+  chmod +x "$FULL_PATH"
+fi
+
+# Executa o script em background, desacoplado do terminal
+setsid "$FULL_PATH" >/dev/null 2>&1 &

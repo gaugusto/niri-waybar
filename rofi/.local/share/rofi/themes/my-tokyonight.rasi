@@ -1,5 +1,5 @@
 * {
-  font:   "sans-serif 14";
+  font:   "sans-serif 12";
   // font:   "JetBrainsMono Nerd Font Propo Medium 14";
 
   bg0     : #1a1b26;
