@@ -31,6 +31,7 @@ PACKAGES=(
   gnome-calculator
   go
   helvum
+  htop
   hunspell-pt-br
   i2c-tools
   jq
@@ -42,9 +43,11 @@ PACKAGES=(
   loupe
   lua-jsregexp
   luarocks
+  matugen
   mesa-utils
   mpv
   mupdf
+  networkmanager-dmenu
   nim
   nvidia-open-dkms
   nvtop
@@ -78,6 +81,7 @@ PACKAGES=(
   vulkan-headers
   vulkan-tools
   wget
+  wlsunset
   wtype
   yay
   yay-debug
