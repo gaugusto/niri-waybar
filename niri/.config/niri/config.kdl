@@ -57,8 +57,28 @@ layout {
   }
 }
 
+overview {
+    zoom 0.5
+    backdrop-color "#1a1b26"
+
+    workspace-shadow {
+        // off
+        softness 40
+        spread 10
+        offset x=0 y=10
+        color "#00000050"
+    }
+}
+
 hotkey-overlay {
   skip-at-startup
+}
+
+cursor {
+    xcursor-theme "catppuccin-mocha-dark-cursors"
+    xcursor-size 24
+    hide-when-typing
+    hide-after-inactive-ms 1000
 }
 
 output "eDP-1" {
@@ -68,7 +88,6 @@ output "eDP-1" {
     position x=0 y=0
     variable-refresh-rate // on-demand=true
     focus-at-startup
-    backdrop-color "#001100"
 
     hot-corners {
         off
@@ -86,7 +105,6 @@ output "DP-1" {
     position x=2560 y=0
     variable-refresh-rate // on-demand=true
     focus-at-startup
-    backdrop-color "#001100"
 
     hot-corners {
         off
@@ -103,8 +121,6 @@ output "DP-2" {
     scale 1.0
     position x=0 y=0
     variable-refresh-rate // on-demand=true
-    focus-at-startup
-    backdrop-color "#001100"
 
     hot-corners {
         off
@@ -116,8 +132,8 @@ output "DP-2" {
 }
 
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-prefer-no-csd
 screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
 
 animations {
   // off
