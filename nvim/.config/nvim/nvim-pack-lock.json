@@ -33,6 +33,10 @@
       "rev": "577d2dcb558efce1518c45a76345e01bf346c8e8",
       "src": "https://www.github.com/echasnovski/mini.nvim"
     },
+    "nvim-highlight-colors": {
+      "rev": "e2cb22089cc2358b2b995c09578224f142de6039",
+      "src": "https://www.github.com/brenoprata10/nvim-highlight-colors"
+    },
     "nvim-lspconfig": {
       "rev": "a40d22e75d951ad2fcf236ceb013d88f81d2cc9a",
       "src": "https://www.github.com/neovim/nvim-lspconfig"

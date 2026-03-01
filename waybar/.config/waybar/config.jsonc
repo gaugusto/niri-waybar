@@ -11,7 +11,8 @@
     "ext/workspaces"
   ],
   "modules-center": [
-    "clock"
+    "clock",
+    "tray"
   ],
   "modules-right": [
     "idle_inhibitor",
@@ -21,7 +22,6 @@
     "cpu",
     "memory",
     "battery",
-    "tray",
     "mpd",
     "custom/notification",
     "custom/power"

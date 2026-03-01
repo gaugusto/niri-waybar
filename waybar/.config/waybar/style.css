@@ -1,8 +1,8 @@
 @import "../color-themes/colors.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo";
-  /* font-family: "monospace"; */
+  /* font-family: "JetBrainsMono Nerd Font Propo"; */
+  font-family: "monospace";
   font-weight: 600;
   font-size: 0.9rem;
 
@@ -67,7 +67,7 @@ window#waybar {
 
 #workspaces button.focused:hover,
 #workspaces button.active:hover {
-  background-color: @secondary;
+  background-color: @info;
   color: @primaryText;
 }
 
@@ -107,8 +107,9 @@ window#waybar {
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: @secondary;
+  background-color: @info;
   color: @primaryText;
+  transition: all 0.3s ease-in-out
 }
 
 #custom-power {
