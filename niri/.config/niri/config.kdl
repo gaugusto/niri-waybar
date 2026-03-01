@@ -260,6 +260,10 @@ binds {
     spawn-sh "~/.local/bin/wallset-random.sh";
   }
 
+  Mod+Y hotkey-overlay-title="Youtube on mpv" {
+    spawn-sh "~/.local/bin/youtube-mpv.sh"
+  }
+
   Mod+D hotkey-overlay-title="D-menus" {
     spawn-sh "~/.local/bin/dmenus";
   }
