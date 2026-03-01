@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EDITOR="alacritty -e nvim"
+EDITOR="alacritty -e bob run nightly"
 
 CONFIGS=(
   "Alacritty ~/.config/alacritty/."
