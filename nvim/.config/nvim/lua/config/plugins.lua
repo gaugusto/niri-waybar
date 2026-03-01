@@ -260,7 +260,15 @@ require("gitsigns").setup({
 	current_line_blame = false,
 })
 
-require("mason").setup({})
+require("mason").setup({
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
+    }
+  }
+})
 
 vim.keymap.set("n", "]h", function()
 	require("gitsigns").next_hunk()
