@@ -1,4 +1,4 @@
-@import "../color-themes/colors.css";
+@import "../color-themes/tokyonight-storm.css";
 
 * {
   /* font-family: "JetBrainsMono Nerd Font Propo"; */
@@ -17,17 +17,17 @@
 
 tooltip {
   border-radius: 10px;
-  background-color: alpha(@background, 0.99);
+  background-color: alpha(@surface2, 0.99);
   border: none;
 }
 
 tooltip label {
-  color: @backgroundText;
+  color: @text;
   padding: 15px;
 }
 
 window#waybar {
-  background-color: alpha(@surface, 0.6);
+  background-color: alpha(@surface2, 0.8);
   border-radius: 100px;
   border: none;
 }
@@ -39,8 +39,8 @@ window#waybar {
 }
 
 #workspaces button {
-  background-color: darker(@surface);
-  color: lighter(@surfaceText);
+  background-color: @surface1;
+  color: @text;
   border-radius: 100px;
   margin: 3px 5px;
   min-width: 30px;
@@ -51,28 +51,28 @@ window#waybar {
   background: inherit;
   text-shadow: inherit;
 
-  background-color: @secondary;
-  color: @surfaceText;
+  background-color: @teal;
+  color: @surface0;
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: darker(@outline);
-  color: @surfaceText;
+  background-color: @surface2;
+  color: @text;
   min-width: 65px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused:hover,
 #workspaces button.active:hover {
-  background-color: @info;
-  color: @primaryText;
+  background-color: @teal;
+  color: @surface0;
 }
 
 #workspaces button.urgent {
-  background-color: darker(@error);
+  background-color: @red; 
 }
 
 #custom-drawer,
@@ -91,8 +91,8 @@ window#waybar {
   padding: 3px 10px;
   margin: 3px 5px;
   border-radius: 100px;
-  background-color: darker(@outline);
-  color: @surfaceText;
+  background-color: @surface2;
+  color: @text;
 }
 
 #custom-drawer:hover,
@@ -107,8 +107,8 @@ window#waybar {
 #clock:hover,
 #custom-notification:hover,
 #custom-power:hover {
-  background-color: @info;
-  color: @primaryText;
+  background-color: @teal;
+  color: @surface2;
   transition: all 0.3s ease-in-out
 }
 
@@ -117,24 +117,24 @@ window#waybar {
 }
 
 #power-profiles-daemon.performance {
-  color: @error;
+  color: @red;
 }
 
 #power-profiles-daemon.balanced {
-  color: @warning;
+  color: @orange;
 }
 
 #power-profiles-daemon.power-saver {
-  color: @info;
+  color: @blue;
 }
 
 
 #network.disconnected {
-  background-color: darker(@primary);
+  background-color: @red2;
 }
 
 #pulseaudio.muted {
-  background-color: darker(#f53c3c);
+  background-color: @red;
   color: @secondary;
 }
 
@@ -144,15 +144,15 @@ window#waybar {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: darker(#f53c3c);
+  background-color: @red;
 }
 
 #tray menu {
-  background-color: @surface;
+  background-color: @surface2;
 }
 
 #idle_inhibitor.activated {
-  background-color: @primary;
-  color: @primaryText;
+  /* background-color: @surface; */
+  color: @orange;
 }
 
