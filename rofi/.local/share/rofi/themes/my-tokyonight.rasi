@@ -1,61 +1,65 @@
 * {
-  font:   "sans-serif 12";
-  // font:   "JetBrainsMono Nerd Font Propo Medium 14";
+font:   "sans-serif 12";
+	// font:   "JetBrainsMono Nerd Font Propo Medium 14";
 
-  bg0     : #1a1b26;
-  bg1     : #1f2335;
-  bg2     : #24283b;
-  bg3     : #414868;
-  fg0     : #c0caf5;
-  fg1     : #a9b1d6;
-  fg2     : #737aa2;
-  red     : #f7768e;
-  green   : #9ece6a;
-  yellow  : #e0af68;
-  blue    : #7aa2f7;
-  magenta : #bb9af7;
-  cyan    : #4abaaf;
+accent: #7aa2f7;
+surface0: #292e42;
+surface1: #1f2335;
+surface2: #1b1e2d;
+cyan: #7dcfff;
+teal: #1abc9c;
+text: #c0caf5;
+base: #24283B;
+red:  #f7768e;
+red2: #db4b4b;
+blue: #7aa2f7;
+orange: #ff9e64;
+yellow: #e0af68;
+green: #9ece6a;
+purple: #9d7cd8;
+magenta: #bb9af7;
 
-  accent: #7dcfff;
-  urgent: @yellow;
 
-  background-color : transparent;
-  text-color       : @fg0;
+	 //
+urgent: @yellow;
 
-  margin  : 0;
-  padding : 0;
-  spacing : 0;
+	background-color : transparent;
+	text-color       : @text;
+
+margin  : 0;
+padding : 0;
+spacing : 0;
 }
 
 element-icon, element-text, scrollbar {
-  cursor: pointer;
+cursor: pointer;
 }
 
 window {
-  location : center;
-  width    : 680px;
-  // height   : 480px;
-  x-offset : 4px;
-  y-offset : 26px;
+location : center;
+width    : 680px;
+	   // height   : 480px;
+	   x-offset : 4px;
+	   y-offset : 26px;
 
-  background-color: @bg0;
-  border: 1px;
-  border-color: @bg3;
-  border-radius: 12px;
+	   background-color: @surface2;
+border: 1px;
+	border-color: @surface0;
+	border-radius: 12px;
 
-  padding: 8px;
+padding: 8px;
 }
 
 inputbar {
-  spacing  : 8px;
-  padding  : 8px 8px;
-  margin   : 8px 0px;
-  border-radius: 12px;
-  children : [ icon-search, entry ];
+spacing  : 8px;
+padding  : 8px 8px;
+margin   : 8px 0px;
+	   border-radius: 12px;
+children : [ icon-search, entry ];
 
-  background-color: @bg1;
-  border: 1px;
-  border-color: @bg3;
+	   background-color: @surface1;
+border: 1px;
+	border-color: @surface0;
 }
 
 icon-search, entry, element-icon, element-text {
@@ -63,28 +67,28 @@ icon-search, entry, element-icon, element-text {
 }
 
 icon-search {
-  expand   : false;
-  filename : "search-symbolic";
-  size     : 14px;
+expand   : false;
+filename : "search-symbolic";
+size     : 14px;
 }
 
 textbox {
-  padding          : 4px 8px;
-  background-color : @bg2;
+padding          : 4px 8px;
+		   background-color : @blue;
 }
 
 listview {
-  padding      : 4px 4px;
-  lines        : 10;
-  columns      : 1;
-  scrollbar    : false;
-  fixed-height : false;
-  dynamic      : true;
+padding      : 4px 4px;
+lines        : 10;
+columns      : 1;
+scrollbar    : false;
+	       fixed-height : false;
+dynamic      : true;
 }
 
 element {
-  padding : 10px 10px;
-  spacing : 8px;
+padding : 10px 10px;
+spacing : 8px;
 }
 
 element normal urgent {
@@ -100,11 +104,11 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @bg0;
-  background-color : @accent;
+  text-color       : @surface2;
+  background-color : @teal;
   border-radius: 12px;
-  border: 1px;
-  border-color: @bg0;
+border: 1px;
+	border-color: @surface0;
 }
 
 element selected urgent {
@@ -112,7 +116,7 @@ element selected urgent {
 }
 
 element-icon {
-  size: 0.8em;
+size: 0.8em;
 }
 
 element-text {
@@ -121,7 +125,7 @@ element-text {
 
 scrollbar {
   handle-width : 4px;
-  handle-color : @fg2;
-  padding      : 0 4px;
+  handle-color : @surface1;
+padding      : 0 4px;
 }
 
