@@ -1,4 +1,4 @@
-@import '../color-themes/colors.css';
+@import '../color-themes/tokyonight-storm.css';
 
 * {
   all: unset;
@@ -8,7 +8,7 @@
 }
 
 trough highlight {
-  background: @surfaceText;
+  background: @surface2;
 }
 
 scale {
@@ -27,24 +27,24 @@ trough slider {
   border-radius: 12.6px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease-in-out;
-  background-color: @primary;
+  background-color: @accent;
 }
 
 trough slider:hover {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 8px @primary;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8), 0 0 8px @teal;
 }
 
 trough {
-  background-color: @surface;
+  background-color: @magenta;
 }
 
 /* notifications */
 .notification-background {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px @outline;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px @surface0;
   border-radius: 12.6px;
   margin: 18px;
-  background: #181825;
-  color: @surfaceText;
+  background: @surface2;
+  color: @text;
   padding: 0;
 }
 
@@ -54,7 +54,7 @@ trough {
 }
 
 .notification-background .notification.critical {
-  box-shadow: inset 0 0 7px 0 @error;
+  box-shadow: inset 0 0 7px 0 @red;
 }
 
 .notification .notification-content {
@@ -67,15 +67,15 @@ trough {
 }
 
 .notification-content .summary {
-  color: @surfaceText;
+  color: @text;
 }
 
 .notification-content .time {
-  color: #a6adc8;
+  color: @text;
 }
 
 .notification-content .body {
-  color: #bac2de;
+  color: @text;
 }
 
 .notification > *:last-child > * {
@@ -86,46 +86,46 @@ trough {
   margin: 7px;
   padding: 2px;
   border-radius: 6.3px;
-  color: @surface;
-  background-color: @info;
+  color: @base;
+  background-color: @teal;
 }
 
 .notification-background .close-button:hover {
-  background-color: @error;
+  background-color: @red;
 }
 
 .notification-background .close-button:active {
-  background-color: @info;
+  background-color: @accent;
 }
 
 .notification .notification-action {
   border-radius: 7px;
-  color: @surfaceText;
-  box-shadow: inset 0 0 0 1px @outline;
+  color: @text;
+  box-shadow: inset 0 0 0 1px @base;
   margin: 4px;
   padding: 8px;
   font-size: 0.2rem; /* controls the button size not text size*/
 }
 
 .notification .notification-action {
-  background-color: @surface;
+  background-color: @surface2;
 }
 
 .notification .notification-action:hover {
-  background-color: @outline;
+  background-color: @green;
 }
 
 .notification .notification-action:active {
-  background-color: #585b70;
+  background-color: @text;
 }
 
 .notification.critical progress {
-  background-color: @error;
+  background-color: @red;
 }
 
 .notification.low progress,
 .notification.normal progress {
-  background-color: @primary;
+  background-color: @accent;
 }
 
 .notification progress,
@@ -137,16 +137,16 @@ trough {
 
 /* control center */
 .control-center {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px @surface;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px @surface0;
   border-radius: 12.6px;
-  background-color: @surface;
-  color: @surfaceText;
+  background-color: @surface1;
+  color: @text;
   padding: 14px;
 }
 
 .control-center .notification-background {
   border-radius: 15px;
-  box-shadow: inset 0 0 0 1px @outline;
+  box-shadow: inset 0 0 0 1px @surface0;
   margin: 4px 10px;
 }
 
@@ -159,25 +159,25 @@ trough {
 }
 
 .control-center .widget-title > label {
-  color: @surfaceText;
+  color: @text;
   font-size: 1.3em;
 }
 
 .control-center .widget-title button {
   border-radius: 7px;
-  color: @surfaceText;
-  background-color: @surface;
-  box-shadow: inset 0 0 0 1px @outline;
+  color: @text;
+  background-color: @surface2;
+  box-shadow: inset 0 0 0 1px @surface0;
   padding: 8px;
 }
 
 .control-center .widget-title button:hover {
-  background-color: @info;
-  color: @primaryText;
+  background-color: @teal;
+  color: @base;
 }
 
 .control-center .widget-title button:active {
-  background-color: @secondary;
+  background-color: @magenta;
 }
 
 .control-center .notification-group {
@@ -185,7 +185,7 @@ trough {
 }
 
 .control-center .notification-group:focus .notification-background {
-  background-color: @surfaceVariant;
+  background-color: @surface2;
 }
 
 scrollbar slider {
@@ -207,31 +207,32 @@ scrollbar trough {
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 8px;
-  background: @outline;
+  background: @base;
   box-shadow: none;
 }
 
 .widget-dnd > switch:checked {
-  background: @primary;
+  background: @teal;
 }
 
 .widget-dnd > switch slider {
-  background: @surfaceText;
+  background: @text;
   border-radius: 15px;
 }
 
 
 /* mpris */
 .widget-mpris-player {
-  background: @surface;
+  background: @surface2;
   border-radius: 12.6px;
-  color: @surfaceText;
+  color: @text;
 }
 
 .mpris-overlay {
-  background-color: @surface;
+  background-color: @surface1;
   opacity: 0.9;
   padding: 15px 10px;
+
 }
 
 .widget-mpris-album-art {
@@ -247,12 +248,12 @@ scrollbar trough {
 
 .widget-mpris-subtitle {
   font-size: 1rem;
-  color: #bac2de;
+  color: @text;
 }
 
 .widget-mpris button {
   border-radius: 12.6px;
-  color: @surfaceText;
+  color: @text;
   margin: 0 5px;
   padding: 2px;
 }
@@ -262,11 +263,11 @@ scrollbar trough {
 }
 
 .widget-mpris button:hover {
-  background-color: @surface;
+  background-color: @surface2;
 }
 
 .widget-mpris button:active {
-  background-color: @outline;
+  background-color: @base;
 }
 
 .widget-mpris button:disabled {
@@ -285,11 +286,11 @@ scrollbar trough {
 .power-buttons button:hover,
 .powermode-buttons button:hover,
 .screenshot-buttons button:hover {
-  background: @surface;
+  background: @surface2;
 }
 
 .control-center .widget-label > label {
-  color: @surfaceText;
+  color: @text;
   font-size: 2rem;
 }
 
@@ -306,21 +307,21 @@ scrollbar trough {
 }
 
 .widget-volume label {
-  color: #74c7ec;
+  color: @cyan;
   padding: 0 1rem;
 }
 
 .widget-volume trough highlight {
-  background: #74c7ec;
+  background: @cyan;
 }
 
 .widget-backlight trough highlight {
-  background: #f9e2af;
+  background: @orange;
 }
 
 .widget-backlight label {
   font-size: 1.5rem;
-  color: #f9e2af;
+  color: @yellow;
 }
 
 .widget-backlight .KB {
