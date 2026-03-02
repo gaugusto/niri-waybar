@@ -43,7 +43,7 @@ layout {
   border {
     on
     width 3
-    active-color "#7dcfff"
+    active-color "#1abc9c"
     inactive-color "#3b4261"
     urgent-color "#f7768e"
   }
