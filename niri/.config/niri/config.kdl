@@ -276,6 +276,10 @@ binds {
     spawn-sh "~/.local/bin/cliphist.sh";
   }
 
+  Mod+Shift+C hotkey-overlay-title="Clip Cliphist" {
+    spawn "cliphist" "wipe";
+  }
+
   XF86AudioRaiseVolume allow-when-locked=true {
     spawn-sh "~/.local/bin/vol-control.sh --composer niri raise";
   }
