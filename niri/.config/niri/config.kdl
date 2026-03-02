@@ -261,7 +261,11 @@ binds {
   }
 
   Mod+Y hotkey-overlay-title="Youtube on mpv" {
-    spawn-sh "~/.local/bin/youtube-mpv.sh"
+    spawn-sh "~/.local/bin/youtube-mpv.sh";
+  }
+
+  Mod+Alt+F hotkey-overlay-title="Toggle Float" {
+    toggle-window-floating;
   }
 
   Mod+D hotkey-overlay-title="D-menus" {
