@@ -4,6 +4,9 @@
 vim.g.mapleader = " " -- space for leader
 vim.g.maplocalleader = " " -- space for localleader
 
+-- File explorer
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Abrir explorador de arquivos" })
+
 -- better movement in wrapped text
 vim.keymap.set("n", "j", function()
 	return vim.v.count == 0 and "gj" or "j"
