@@ -5,7 +5,7 @@ if ! command -v wl-paste &> /dev/null; then
   exit 1
 fi
 
-YOUTUBE_LINK=$(cliphist list | grep -E "^[0-9]+\s+https://www\.youtube\.com/" | head -n 1 | cliphist decode)
+YOUTUBE_LINK=$(cliphist list | awk '$2 ~ /youtube\.com|youtb\.be/ {print $2}' | head -n 1)
 
 if [ -z "$YOUTUBE_LINK" ]; then
   notify-send "Nenhum link válido na área de transferência." -n avatar-default -a youtube-mpv.sh -u low
