@@ -1,15 +1,26 @@
 #!/usr/bin/env bash
 
-if ! command -v wl-paste &> /dev/null; then
-  echo "Erro: wl-clipboard não está instalado."
+# 1. Verifica dependências
+if ! command -v cliphist &> /dev/null || ! command -v rofi &> /dev/null; then
+  notify-send "Erro" "cliphist ou rofi não estão instalados."
   exit 1
 fi
 
-YOUTUBE_LINK=$(cliphist list | awk '$2 ~ /youtube\.com|youtb\.be/ {print $2}' | head -n 1)
+# 2. Obtém a lista de links (Removendo duplicatas com uniq)
+LINKS=$(cliphist list | awk '$2 ~ /youtube\.com|youtu\.be/ {print $2}' | uniq)
 
-if [ -z "$YOUTUBE_LINK" ]; then
-  notify-send "Nenhum link válido na área de transferência." -n avatar-default -a youtube-mpv.sh -u low
+# 3. Verifica se a lista está vazia
+if [ -z "$LINKS" ]; then
+  notify-send "YouTube-MPV" "Nenhum link encontrado no histórico." -u low
   exit 1
-else
-  /usr/bin/mpv $YOUTUBE_LINK
 fi
+
+# 4. Abre o Rofi para seleção
+ESCOLHA=$(echo "$LINKS" | rofi -dmenu -i -config-name "youtube-selector")
+
+# 5. Se o usuário não cancelou (Esc), executa o MPV
+if [ -n "$ESCOLHA" ]; then
+  notify-send "MPV" "Abrindo: $ESCOLHA" -u low
+  /usr/bin/mpv "$ESCOLHA"
+fi
+
