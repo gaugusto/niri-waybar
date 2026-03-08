@@ -87,6 +87,9 @@ window#waybar {
 #tray,
 #clock,
 #custom-notification,
+#wireplumber,
+#systemd-failed-units,
+#mpris,
 #custom-power {
   padding: 3px 10px;
   margin: 3px 5px;
@@ -103,6 +106,8 @@ window#waybar {
 #cpu:hover,
 #memory:hover,
 #wireplumber:hover,
+#systemd-failed-units:hover,
+#mpris:hover,
 #battery:hover,
 #clock:hover,
 #custom-notification:hover,

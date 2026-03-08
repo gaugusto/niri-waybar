@@ -8,22 +8,23 @@
   "reload_style_on_change": true,
   "width": 1344,
   "modules-left": [
-    "ext/workspaces"
+    "ext/workspaces",
+    "mpris",
   ],
   "modules-center": [
+    "systemd-failed-units",
     "clock",
+    "custom/notification",
     "tray"
   ],
   "modules-right": [
-    "idle_inhibitor",
-    "pulseaudio",
-    "network",
-    "power-profiles-daemon",
     "cpu",
     "memory",
     "battery",
-    "mpd",
-    "custom/notification",
+    "network",
+    "wireplumber",
+    "idle_inhibitor",
+    "power-profiles-daemon",
     "custom/power"
   ],
   "ext/workspaces": {
@@ -77,7 +78,8 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{:%H:%M 󰇙 %a, %d %b %Y}",
+    "format-alt": "{:%H:%M 󰇙 %a, %d %b %Y}",
+    "format": "{:%H:%M}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
@@ -224,6 +226,32 @@
   "custom/drawer": {
     "format": "",
     "interval": 0
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "dynamic-len": 40,
+    "player-icons": {
+      "default": "▶",
+      "mpv": ""
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+  // "ignored-players": ["firefox"]
+  },
+  "systemd-failed-units": {
+    "hide-on-ok": false, // Do not hide if there is zero failed units.
+    "format": "✗ {nr_failed}",
+    "format-ok": "✓",
+    "system": true, // Monitor failed systemwide units.
+    "user": false // Ignore failed user units.
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": ["", "", ""]
   }
 }
 
