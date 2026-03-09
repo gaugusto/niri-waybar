@@ -221,6 +221,7 @@
   },
   "custom/power": {
     "format": "⏻",
+    "tooltip": false,
     "on-click": "~/.local/bin/session-menu.sh"
   },
   "custom/drawer": {
