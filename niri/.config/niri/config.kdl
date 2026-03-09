@@ -43,7 +43,7 @@ layout {
   border {
     on
     width 3
-    active-color "#1abc9c"
+    active-color "#9d7cd8"
     inactive-color "#3b4261"
     urgent-color "#f7768e"
   }
@@ -237,6 +237,7 @@ layer-rule {
   match namespace="^dms:bar$"
   match namespace="^dms:dock$"
   match namespace="rofi"
+  match namespace="walker"
 
   shadow {
     on
@@ -279,8 +280,12 @@ binds {
   Mod+Shift+Slash { show-hotkey-overlay; }
 
   // Apps
+  // Mod+Space hotkey-overlay-title="Open app launcher" {
+  //   spawn "rofi" "-show" "drun" "-show-icons"
+  // }
+
   Mod+Space hotkey-overlay-title="Open app launcher" {
-    spawn "rofi" "-show" "drun" "-show-icons"
+    spawn "walker"
   }
 
   Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" {
