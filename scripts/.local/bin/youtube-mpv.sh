@@ -16,7 +16,7 @@ if [ -z "$LINKS" ]; then
 fi
 
 # 4. Abre o Rofi para seleção
-ESCOLHA=$(echo "$LINKS" | rofi -dmenu -i -config-name "youtube-selector")
+ESCOLHA=$(echo "$LINKS" | walker -d)
 
 # 5. Se o usuário não cancelou (Esc), executa o MPV
 if [ -n "$ESCOLHA" ]; then

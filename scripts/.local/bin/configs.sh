@@ -11,7 +11,7 @@ CONFIGS=(
   "Scripts ~/.local/bin/."
 )
 
-CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | rofi -dmenu -i)
+CHOICE=$(printf '%s\n' "${CONFIGS[@]}" | walker -d)
 
 # Se o usuário cancelar, sai do script
 [ -z "$CHOICE" ] && exit 1
