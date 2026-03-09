@@ -33,9 +33,7 @@ window#waybar {
 }
 
 #workspaces {
-  /* margin: 0 0px; */
-  margin-left: 15px;
-  margin-right: 5px;
+  margin: 0px 5px;
   background-color: transparent;
   border-radius: 100px;
 }
@@ -44,7 +42,7 @@ window#waybar {
   background-color: @base;
   color: @surface0;
   border-radius: 100px;
-  margin: 3px 0px;
+  margin: 3px 5px;
   min-width: 30px;
 }
 
@@ -156,6 +154,7 @@ window#waybar {
 
 #tray menu {
   background-color: @surface2;
+  padding: 10px;
 }
 
 #idle_inhibitor.activated {

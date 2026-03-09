@@ -8,7 +8,7 @@
   "reload_style_on_change": true,
   "width": 1344,
   "modules-left": [
-    "ext/workspaces",
+    "niri/workspaces",
     "mpris",
   ],
   "modules-center": [
@@ -27,26 +27,12 @@
     "power-profiles-daemon",
     "custom/power"
   ],
-  "ext/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "warp-on-scroll": false,
-    "active-only": true,
-    "format": "{name}",
+  "niri/workspaces": {
+    "format": "{icon}",
     "format-icons": {
-      "urgent": "",
-      "focused": "",
+      "browser": "",
       "active": "",
       "default": ""
-    },
-    "persistent-workspaces": {
-      "DP-2": [
-        1
-      ],
-      "DP-1": [
-        2,
-        3
-      ]
     }
   },
   "group/principal": {
