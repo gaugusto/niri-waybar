@@ -16,6 +16,7 @@ mkNiriService = { desc, exec, package }: {
 in
 {
   imports = [
+    inputs.walker.homeManagerModules.default
   ];
 
   home.username = "gaugusto";
@@ -32,6 +33,33 @@ in
 #     rebuild-b = "sudo nixos-rebuild boot --flake ~/nixos-dotfiles#niri-btw";
 #   };
 # };
+
+  programs.fuzzel.enable = true;
+
+  programs.walker = {
+    enable = true;
+    runAsService = true; 
+
+      # All options from the config.toml can be used here 
+      #https://github.com/abenz1267/walker/blob/master/resources/config.toml
+      config = {
+        hide_action_hints = true;
+        hide_action_hints_dmenu = true;
+        hide_quick_activation = true;
+
+        placeholders."default" = { input = "Search"; list = "Example"; };
+        providers.prefixes = [
+        {provider = "websearch"; prefix = "+";}
+        {provider = "providerlist"; prefix = "_";}
+        ];
+        keybinds.quick_activate = ["F1" "F2" "F3"];
+        keybinds.up = ["ctrl k"]; 
+        keybinds.down = ["ctrl j"]; 
+
+        keybinds.next = ["ctrl j"]; 
+        keybinds.previous = ["ctrl k"]; 
+      };
+  };
 
   programs.zsh = {
     enable = true;
