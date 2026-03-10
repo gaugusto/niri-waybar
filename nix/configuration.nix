@@ -125,7 +125,7 @@
 # List packages installed in system profile. To search, run:
 # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim 
+    vim
       wget
       git
       mpv
@@ -158,7 +158,7 @@
       adw-gtk3
       catppuccin-cursors.mochaDark
       networkmanager_dmenu
-  ];
+      ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
