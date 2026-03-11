@@ -21,13 +21,13 @@
   "timeout-critical": 0,
   "fit-to-screen": true,
   "relative-timestamps": true,
-  "control-center-width": 450,
+  "control-center-width": 400,
   "control-center-height": 900,
-  "notification-window-width": 500,
+  "notification-window-width": 400,
   "keyboard-shortcuts": true,
   "notification-grouping": true,
   "image-visibility": "when-available",
-  "transition-time": 200,
+  "transition-time": 100,
   "hide-on-clear": false,
   "hide-on-action": true,
   "text-empty": "No Notifications",
@@ -53,11 +53,11 @@
     }
   },
   "widgets": [
+    "mpris",
     "inhibitors",
     "title",
     "dnd",
-    "notifications",
-    "mpris"
+    "notifications"
   ],
   "widget-config": {
     "notifications": {
@@ -82,7 +82,7 @@
     },
     "mpris": {
       "blacklist": [],
-      "autohide": false,
+      "autohide": true,
       "show-album-art": "always",
       "loop-carousel": false
     },
