@@ -19,6 +19,7 @@
       "splash"
       "transparent_hugepage=always"
       "preempt=full"
+      "i915.enable_guc=3"
     ];
   };
 
@@ -26,6 +27,9 @@
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver
+      libvdpau-va-gl
+      libva-utils
+      intel-gpu-tools
     ];
   };
   environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; };

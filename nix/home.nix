@@ -124,6 +124,7 @@ in
   home.file.".config/swaync".source = ../swaync/.config/swaync;
   home.file.".config/rofi".source = ../rofi/.config/rofi;
   home.file.".local/share/rofi/themes".source = ../rofi/.local/share/rofi/themes;
+  home.file.".config/walker".source = ../walker/.config/walker;
   # home.file.".config/nvim".source = ../nvim/.config/nvim;
   home.file.".local/bin".source = ../scripts/.local/bin;
   # home.file.".config/gtk-3.0/colors.css".source = ../gtk/.config/gtk-3.0/colors.css;
@@ -166,6 +167,7 @@ in
     python3
     unzip
     luarocks
+    nitch
   ];
 }
 
