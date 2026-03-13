@@ -216,6 +216,7 @@ window-rule {
   match app-id="nwg-look"
   match app-id="pavucontrol"
   match app-id="virt-manager"
+  match app-id="org.pipewire.Helvum"
 
   open-floating true
 }
