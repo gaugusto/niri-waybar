@@ -69,6 +69,7 @@ in
 
     shellAliases = {
       btw = "echo I use Niri btw";
+      ls = "eza --icons=always";
       nrs = "sudo nixos-rebuild switch --impure --flake ~/niri-waybar/nix#niri-btw";
       nrb = "sudo nixos-rebuild boot --impure --flake ~/niri-waybar/nix#niri-btw";
     };
@@ -168,6 +169,7 @@ in
     unzip
     luarocks
     nitch
+    eza
   ];
 }
 
