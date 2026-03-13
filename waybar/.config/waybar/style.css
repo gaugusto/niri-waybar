@@ -27,7 +27,8 @@ tooltip label {
 }
 
 window#waybar {
-  background-color: alpha(@surface2, 0.99);
+  /* background-color: alpha(@surface2, 0.99); */
+  background-color: alpha(@surface2, 0.5);
   border-radius: 100px;
   border: none;
 }
@@ -40,7 +41,7 @@ window#waybar {
 
 #workspaces button {
   background-color: @base;
-  color: @surface0;
+  color: alpha(@text, 0.4);
   border-radius: 100px;
   margin: 3px 5px;
   min-width: 30px;

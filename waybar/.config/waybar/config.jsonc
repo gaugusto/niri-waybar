@@ -28,7 +28,7 @@
     "custom/power"
   ],
   "niri/workspaces": {
-    "format": "{icon}",
+    "format": "{value}",
     "format-icons": {
       "browser": "",
       "active": "",
