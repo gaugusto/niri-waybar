@@ -18,7 +18,7 @@ mapfile -t SCRIPTS < <(find "$BIN_DIR" -maxdepth 1 -type f -name "*.sh" -printf 
 }
 
 # Menu com rofi (modo dmenu)
-SELECTED=$(printf "%s\n" "${SCRIPTS[@]}" | rofi -show -dmenu -i)
+SELECTED=$(printf "%s\n" "${SCRIPTS[@]}" | walker -d)
 
 # Sai se nada foi selecionado
 [ -z "$SELECTED" ] && exit 0
