@@ -34,17 +34,17 @@ window#waybar {
 }
 
 #workspaces {
-  margin: 0px 5px;
-  background-color: transparent;
+  margin: 3px 5px;
+  background-color: @surface0;
   border-radius: 100px;
 }
 
 #workspaces button {
-  background-color: @base;
-  color: alpha(@text, 0.4);
+  background-color: @purple;
+  color: alpha(@surface2, 0.5);
   border-radius: 100px;
-  margin: 3px 5px;
-  min-width: 30px;
+  margin: 5px 5px;
+  min-width: 45px;
 }
 
 #workspaces button:hover {
@@ -54,23 +54,22 @@ window#waybar {
 
   background-color: @teal;
   color: @surface0;
-  min-width: 65px;
+  min-width: 45px;
   transition: all 0.3s ease-in-out
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: @base;
-  color: @text;
-  min-width: 65px;
+  background-color: @text;
+  color: @surface0;
   transition: all 0.3s ease-in-out
 }
 
-#workspaces button.focused:hover,
-#workspaces button.active:hover {
-  background-color: @purple;
-  color: @surface0;
-}
+/* #workspaces button.focused:hover, */
+/* #workspaces button.active:hover { */
+/*   background-color: @magenta; */
+/*   color: @surface0; */
+/* } */
 
 #workspaces button.urgent {
   background-color: @red;
@@ -120,6 +119,10 @@ window#waybar {
 
 #custom-power {
   margin-right: 15px;
+}
+
+#workspaces {
+  margin-left: 15px;
 }
 
 #power-profiles-daemon.performance {
