@@ -378,15 +378,13 @@ binds {
     spawn "swayosd-client" "--brightness" "-10";
   }
 
-
   Mod+O repeat=false { toggle-overview; }
-
   Mod+Q repeat=false { close-window; }
 
   Mod+H          { focus-column-left; }
+  Mod+L          { focus-column-right; }
   Mod+J          { focus-window-or-workspace-down; }
   Mod+K          { focus-window-or-workspace-up; }
-  Mod+L          { focus-column-right; }
 
   Mod+Ctrl+H     { move-column-left; }
   Mod+Ctrl+L     { move-column-right; }
@@ -394,14 +392,14 @@ binds {
   Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
   Mod+Alt+H      { focus-monitor-left; }
-  Mod+Alt+J      { focus-monitor-down; }
-  Mod+Alt+K      { focus-monitor-up; }
   Mod+Alt+L      { focus-monitor-right; }
+  // Mod+Alt+J      { focus-monitor-down; }
+  // Mod+Alt+K      { focus-monitor-up; }
 
   Mod+Ctrl+Alt+H { move-column-to-monitor-left; }
-  Mod+Ctrl+Alt+J { move-column-to-monitor-down; }
-  Mod+Ctrl+Alt+K { move-column-to-monitor-up; }
   Mod+Ctrl+Alt+L { move-column-to-monitor-right; }
+  // Mod+Ctrl+Alt+J { move-column-to-monitor-down; }
+  // Mod+Ctrl+Alt+K { move-column-to-monitor-up; }
 
   // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
   // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
