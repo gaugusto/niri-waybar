@@ -21,6 +21,6 @@ ESCOLHA=$(echo "$LINKS" | walker -d)
 # 5. Se o usuário não cancelou (Esc), executa o MPV
 if [ -n "$ESCOLHA" ]; then
   notify-send "MPV" "Abrindo: $ESCOLHA" -u low
-  /usr/bin/mpv "$ESCOLHA"
+  mpv "$ESCOLHA"
 fi
 
