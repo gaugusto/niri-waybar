@@ -100,11 +100,10 @@ output "eDP-1" {
 
 output "DP-1" {
     // off
-    mode "3440x1440@160"
+    mode "2560x1080@59.978"
     scale 1.0
-    position x=2560 y=0
+    position x=3440 y=0
     variable-refresh-rate // on-demand=true
-    focus-at-startup
 
     hot-corners {
         off
@@ -117,10 +116,11 @@ output "DP-1" {
 
 output "DP-2" {
     // off
-    mode "2560x1080@75"
+    mode "3440x1440@99.997"
     scale 1.0
     position x=0 y=0
     variable-refresh-rate // on-demand=true
+    focus-at-startup
 
     hot-corners {
         off
@@ -223,7 +223,7 @@ window-rule {
 
 window-rule {
   match app-id="gamescope"
-  open-on-output "DP-1"
+  open-on-output "DP-2"
   open-fullscreen true
 }
 
