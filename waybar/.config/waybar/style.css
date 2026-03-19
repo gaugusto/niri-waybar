@@ -41,7 +41,7 @@ window#waybar {
 
 #workspaces button {
   background-color: @text;
-  color: alpha(@surface2, 0.5);
+  color: alpha(@surface2, 0.8);
   border-radius: 100px;
   margin: 5px 5px;
   min-width: 45px;
